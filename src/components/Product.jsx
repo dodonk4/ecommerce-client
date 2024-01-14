@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Header from './Header';
-import User from '../../../server/src/schemas/User';
+// import User from '../../../server/src/schemas/User';
 import HeaderStatic from './HeaderStatic';
 
 function Product() {
