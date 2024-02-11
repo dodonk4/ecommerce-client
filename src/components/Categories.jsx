@@ -57,7 +57,10 @@ function Categories() {
             {data?.map((product) => {
               if (product.category === categ) {
 
+                console.log(product.image)
+
                 return (
+
                   <Card
                     key={product.name}
                     nameOfProduct={product.name}

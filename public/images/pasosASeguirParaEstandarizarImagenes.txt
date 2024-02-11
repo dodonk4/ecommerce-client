@@ -1,0 +1,3 @@
+1. Aumentar la altura de las imagenes que se desbordan en Paint, recortando el producto y centrandolo.
+2. Convertirlo a PNG con un convertidor
+3. Reempazar la imagen png antigua por la nueva
