@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 
 function Card(props) {
 
+  // console.log(process.env.REACT_APP_API);
   const [data, setData] = useState(null);
   
 
@@ -47,7 +48,10 @@ function Card(props) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username: nameOfTheUser })
       })
-      .then((response) => response.json())
+      .then((response) => {
+        console.log(response);
+        return response.json()
+      })
       .then((data) => {
         data.shoppingCart.map((product) => {
             const onlyTheName = product.split("-")[0];

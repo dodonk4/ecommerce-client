@@ -28,8 +28,14 @@ function Categories() {
 
   useEffect(() => {
     fetch("/api/products")
-      .then((response) => response.json())
-      .then((data) => setData(data));
+      .then((response) => {
+        console.log(response)
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        return setData(data)
+      });
   }, []);
 
   return (
@@ -56,8 +62,6 @@ function Categories() {
         
             {data?.map((product) => {
               if (product.category === categ) {
-
-                console.log(product.image)
 
                 return (
 
