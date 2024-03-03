@@ -10,7 +10,7 @@ export default defineConfig({
     proxy: {
       // '/api': 'http://localhost:3000/',
       '/api': {
-        target: 'http://localhost:3000/',
+        target: 'https://ecommerce-api-black-theta.vercel.app/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '/api'),
       },
