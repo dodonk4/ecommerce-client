@@ -274,6 +274,8 @@ header{
 }
 
 .productImageContainer{
+  display: flex;
+  justify-content: center;
   width: 600px;
   height: 100%;
   /* margin: 40px; */
@@ -566,5 +568,13 @@ footer img{
   }
   .productImageContainer{
     border-radius: 30px 30px 30px 30px;
+    align-items: center;
+    width: unset;
   }
+  .productImage{
+    width: unset;
+    height: 200px;
+    margin-left: unset;
+  }
+  
 }
