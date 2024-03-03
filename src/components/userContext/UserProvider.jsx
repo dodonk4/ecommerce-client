@@ -28,7 +28,7 @@ const UserProvider = ({ children }) => {
     useEffect(() => {
 
       if(!!localStorage.getItem('token') && localStorage.getItem('token') != "undefined"){
-        fetch("/api/uncryptToken", {
+        fetch(`${import.meta.env.VITE_REACT_APP_API}api/uncryptToken`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ token: localStorage.getItem('token') })

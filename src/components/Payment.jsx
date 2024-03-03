@@ -69,7 +69,7 @@ function Payment() {
           console.log("Entre")
           try {
             // Create PaymentIntent as soon as the page loads
-          await fetch("/api/create-payment-intent", {
+          await fetch(`${import.meta.env.VITE_REACT_APP_API}api/create-payment-intent`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ items: [{ name: "xl-tshirt", price: totalPrice }] }),

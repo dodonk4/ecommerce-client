@@ -14,6 +14,7 @@ import { Profile } from './components/Profile'
 import PaymentSuccesful from './components/PaymentSuccesful'
 import Footer from './components/Footer'
 import HeaderStatic from './components/HeaderStatic'
+import Register from './components/Register'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/fafa" element={<><Searching/><Footer/></>}/>
           <Route path="/product" element={<RequireAuth><Product/><Footer/></RequireAuth>}></Route>
           <Route path="/login" element={<Login/>}></Route>
+          <Route path="/register" element={<Register/>}></Route>
           <Route path="/profile" element={<RequireAuth><ProfilePage/><Footer/></RequireAuth>}></Route>
           <Route path="/shoppingCart" element={<RequireAuth><HeaderStatic/><ShoppingCart/><Footer/></RequireAuth>}></Route>
           {/* <Route path="/payment" element={<Elements stripe={stripePromise}><CardElement options={{style: style}}></CardElement></Elements>}></Route> */}
@@ -38,5 +40,7 @@ function App() {
       </UserProvider>
   )
 }
+
+
 
 export default App

@@ -18,7 +18,7 @@ export const Login = () => {
 
     const handleLogin = async () => {
 
-      axios.post("/api/login",{
+      axios.post(`${import.meta.env.VITE_REACT_APP_API}api/login`,{
         username: user,
         password: password
       }
@@ -38,6 +38,7 @@ export const Login = () => {
 
   return (
       <div className='loginBox'>
+        LOGIN:
         <label className='loginUsername'>
             Username: <input type='text' onChange={e => setUser(e.target.value)}></input>
         </label>

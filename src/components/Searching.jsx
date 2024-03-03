@@ -15,7 +15,7 @@ function Searching() {
 
   useEffect(() => {
     try {
-      fetch(`/api/products?${queryParams}`)
+      fetch(`${import.meta.env.VITE_REACT_APP_API}api/products?${queryParams}`)
         .then((response) => response.json())
         .then((data) => setData(data), console.log(data));
     } catch (error) {

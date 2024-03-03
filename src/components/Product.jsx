@@ -29,7 +29,7 @@ function Product() {
 
    
     useEffect(()=>{
-      fetch(`/api/products?product=${productName}`)
+      fetch(`${import.meta.env.VITE_REACT_APP_API}api/products?product=${productName}`)
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((err) => console.log(err))
@@ -60,7 +60,7 @@ function Product() {
 
     useEffect(()=>{
       if(!isItSaved){
-        fetch("/api/uncryptToken", {
+        fetch(`${import.meta.env.VITE_REACT_APP_API}api/uncryptToken`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ token: localStorage.getItem('token') })
@@ -75,7 +75,7 @@ function Product() {
   
     useEffect(()=>{
       if(nameOfTheUser){
-        fetch("/api/findUser", {
+        fetch(`${import.meta.env.VITE_REACT_APP_API}api/findUser`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ username: nameOfTheUser })
@@ -98,7 +98,7 @@ function Product() {
       if(confirmAddition){
         if(!isItSaved){
           const addToCart = () => {
-            fetch("/api/user", {
+            fetch(`${import.meta.env.VITE_REACT_APP_API}api/user`, {
               method: 'PUT',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ username: nameOfTheUser, shoppingCart: `${data.name}-1`, shoppingCartMethod: "add" })

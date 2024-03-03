@@ -30,7 +30,11 @@ export const Profile = () => {
 
       {
         !user && (
-          <NavLink className="loginLink" to="/login">Iniciar Sesión</NavLink>
+          <div className="logAndRegisterBox">
+            <NavLink className="loginLink" to="/login">Iniciar Sesión</NavLink>
+            <NavLink className="registerLink" to="/register">Registrarse</NavLink>
+          </div>
+         
         )
       }
     </div>

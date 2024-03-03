@@ -3,6 +3,9 @@ import Card from './Card.jsx';
 import Footer from './Footer.jsx';
 
 function Categories() {
+
+  console.log(import.meta.env.VITE_REACT_APP_API)
+
   const [data, setData] = useState(null);
   const [categ, setCateg] = useState("Celulares");
   const [activation, setActivation] = useState(false);
@@ -27,7 +30,7 @@ function Categories() {
   };
 
   useEffect(() => {
-    fetch("/api/products")
+    fetch(`${import.meta.env.VITE_REACT_APP_API}api/products`)
       .then((response) => {
         console.log(response)
         return response.json();

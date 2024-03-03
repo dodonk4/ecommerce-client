@@ -38,7 +38,7 @@ export const CardShoppingCart = (props) => {
   useEffect(() => {
     if(confirmRemoval){
       const deleteFromCart = () => {
-        fetch("/api/user", {
+        fetch(`${import.meta.env.VITE_REACT_APP_API}api/user`, {
           method: "PUT",
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify( { username: user, shoppingCart: props.nameOfProduct, shoppingCartMethod: "delete" } )
@@ -55,7 +55,7 @@ export const CardShoppingCart = (props) => {
   useEffect(()=> {
     if(valueMovement != 0){
       const changeQuantity = () => {
-        fetch("api/user", {
+        fetch(`${import.meta.env.VITE_REACT_APP_API}api/user`, {
           method: "PUT",
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify( { username: user, product: props.nameOfProduct, quantity: value, shoppingCartMethod: "replace" } )
