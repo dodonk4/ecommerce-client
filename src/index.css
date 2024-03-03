@@ -557,3 +557,14 @@ footer{
 footer img{
   height: 100px;
 }
+
+@media all and (max-width: 768px) {
+  .productBody{
+    flex-direction: column;
+    height: 800px;
+    
+  }
+  .productImageContainer{
+    border-radius: 30px 30px 30px 30px;
+  }
+}
