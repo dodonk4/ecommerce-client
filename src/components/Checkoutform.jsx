@@ -58,7 +58,7 @@ export default function CheckoutForm() {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: "https://famous-tarsier-bc954e.netlify.app/payment-succesful",
+        return_url: "https://ecommerce-client-isma.netlify.app/payment-succesful",
       },
     });
 
