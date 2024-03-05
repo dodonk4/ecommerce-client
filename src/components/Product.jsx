@@ -131,7 +131,7 @@ function Product() {
       <input type="button" className='goBackButton' value="<" onClick={goBack}></input>
 
       {!data && (
-        <div className='loadingScreen'>LOADING</div>
+        <div className='loaderBox'><div className='loader'/></div>
       )}
       
       {data && (

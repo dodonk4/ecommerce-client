@@ -33,7 +33,7 @@ function Searching() {
     <div className='searchingBox'>
       <HeaderStatic/>
       {!data && (
-        <div className='loadingScreen'>LOADING...</div>
+        <div className='loaderBox'><div className='loader'/></div>
       )}
       {data && (
         <ul className='listOfCards searching'>

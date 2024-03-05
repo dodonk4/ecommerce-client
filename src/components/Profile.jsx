@@ -18,13 +18,13 @@ export const Profile = () => {
 
 
   return (
-    <div>
+    <div class="profileBox" >
       { user && (
         <>
-          <h2>Welcome { user }</h2>
-          <button onClick={() => handleLogout()}>Logout</button>
-          <NavLink to="/profile">Profile</NavLink>
-          <NavLink to="/shoppingCart">Cart</NavLink>
+          <h2 className='userName'>{ user }</h2>
+          <NavLink className="loginLink" to="/profile">Profile</NavLink>
+          <NavLink className="loginLink" to="/shoppingCart">Cart</NavLink>
+          <div className="logoutButton" onClick={() => handleLogout()}>Logout</div>
         </>
       ) }
 

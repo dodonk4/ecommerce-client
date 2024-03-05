@@ -55,7 +55,8 @@ function Categories() {
 
 
       {!data && (
-        <div className='loadingScreen'>LOADING</div>
+        <div className='loaderBox'><div className='loader'/></div>
+        
       )}
 
       {
