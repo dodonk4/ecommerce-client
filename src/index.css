@@ -22,6 +22,13 @@ header{
   box-shadow: 0px 50px 40px rgba(0, 0, 0, 0.2);
 }
 
+.App{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .profileBox{
   display: flex;
   /* flex-direction: column; */
@@ -210,6 +217,19 @@ header{
   height: 500px;
 }
 
+.tiny{
+  height: 20px;
+}
+
+.tinyLoader{
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 4px solid;
+  border-color: #fff #0000;
+  animation: l1 1s infinite;
+}
+
 .loader {
   width: 50px;
   aspect-ratio: 1;
@@ -272,6 +292,10 @@ header{
   height: 35px;
   z-index: 1;
   transition: all 0.2s ease-in-out;
+}
+
+.loading{
+  background-color: #707072;
 }
 
 .isSaved {
@@ -369,6 +393,9 @@ header{
 
 .cartCardsContainer{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   flex-direction: column;
   flex-wrap: wrap;
   width: 75%;
@@ -495,6 +522,17 @@ input[type=number]::-webkit-inner-spin-button {
   transition: all 0.5s ease;
 }
 
+.noProducts{
+  font-size: 50px;
+  color: #707072;
+}
+
+.cartLogo{
+  height: 80px;
+  width: 80px;
+  filter: invert(47%) sepia(6%) saturate(112%) hue-rotate(202deg) brightness(90%) contrast(86%);
+}
+
 /* .loginBoxBox{
   width: 100%;
   height: 100%;
@@ -589,7 +627,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 footer{
-  /* position: fixed; */
+  /* position: absolute; */
   bottom: 0;
   width: 100%;
   background-color: #185024;

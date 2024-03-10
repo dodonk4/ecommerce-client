@@ -18,7 +18,7 @@ export const Profile = () => {
 
 
   return (
-    <div class="profileBox" >
+    <div className="profileBox" >
       { user && (
         <>
           <h2 className='userName'>{ user }</h2>
