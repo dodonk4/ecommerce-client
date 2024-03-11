@@ -27,8 +27,8 @@ function ShopButtonCard(props) {
         <>
           {
             props.theProductIsSaved === "loading" && (
-              <div className='shopCardButton'>
-                Loading...
+              <div className='shopCardButton loading'>
+                <div className='tinyLoader'/>
               </div>
             )
           }
