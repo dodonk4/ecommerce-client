@@ -26,14 +26,21 @@ function ShopButtonCard(props) {
       userLogged && (
         <>
           {
-            props.theProductIsSaved && (
+            props.theProductIsSaved === "loading" && (
+              <div className='shopCardButton'>
+                Loading...
+              </div>
+            )
+          }
+          {
+            props.theProductIsSaved === 1 && (
               <div className='shopCardButton isSaved' onClick={() => navigate("/shoppingCart")}>
                 Agregado
               </div>
             )
           }
           {
-             !props.theProductIsSaved && (
+             props.theProductIsSaved === 0 && (
               <div className={classForNonSavedProduct} onClick={saveProduct}>
                 {title}
               </div>

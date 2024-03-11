@@ -9,7 +9,7 @@ function Card(props) {
   const [data, setData] = useState(null);
   
 
-  const [isItSaved, setIsItSaved] = useState(false);
+  const [isItSaved, setIsItSaved] = useState("loading");
   const [nameOfTheUser, setNameOfTheUser] = useState(undefined);
   const [confirmAddition, setConfirmAddition] = useState(false);
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ function Card(props) {
   }, [])
 
   useEffect(()=>{
-    if(!isItSaved){
+    if(isItSaved === "loading"){
       fetch(`${import.meta.env.VITE_REACT_APP_API}api/uncryptToken`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -49,16 +49,27 @@ function Card(props) {
         body: JSON.stringify({ username: nameOfTheUser })
       })
       .then((response) => {
-        console.log(response);
         return response.json()
       })
       .then((data) => {
-        data.shoppingCart.map((product) => {
-            const onlyTheName = product.split("-")[0];
-            if(onlyTheName == props.nameOfProduct){
-              setIsItSaved(true);
-            }
-          })
+        // data.shoppingCart.map((product) => {
+        //     const onlyTheName = product.split("-")[0];
+        //     if(onlyTheName == props.nameOfProduct){
+        //       setIsItSaved(true);
+        //     }
+        //   })
+
+        for (let i = 0; i < data.shoppingCart.length; i++) {
+          const onlyTheName = data.shoppingCart[i].split("-")[0];
+          if(onlyTheName == props.nameOfProduct){
+            setIsItSaved(1);
+            break;
+          }else{
+            console.log("se le da false")
+            setIsItSaved(0)
+          }
+        }
+
       });
     }
   }, [nameOfTheUser])
