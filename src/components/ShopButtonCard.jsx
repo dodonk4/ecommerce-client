@@ -22,25 +22,11 @@ function ShopButtonCard(props) {
 
   return (
     <>
-
-    
-
     {
       userLogged && (
         <>
           {
-            props.theProductIsSaved == 1 && (
-              // <div className='shopCardButton' onClick={() => navigate("/shoppingCart")}>
-              //   NO
-              // </div>
-              <div className='shopCardButton loading'>
-                <div className='tinyLoader'/>
-              </div>
-              // <div className='loaderBox tiny'></div>
-            )
-          }
-          {
-            props.theProductIsSaved == 2 && (
+            props.theProductIsSaved && (
               <div className='shopCardButton isSaved' onClick={() => navigate("/shoppingCart")}>
                 Agregado
               </div>

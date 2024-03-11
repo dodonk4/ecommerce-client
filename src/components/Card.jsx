@@ -5,10 +5,11 @@ import { useEffect } from 'react';
 
 function Card(props) {
 
-  const [data, setData] = useState(0);
+  // console.log(process.env.REACT_APP_API);
+  const [data, setData] = useState(null);
   
 
-  const [isItSaved, setIsItSaved] = useState(1);
+  const [isItSaved, setIsItSaved] = useState(false);
   const [nameOfTheUser, setNameOfTheUser] = useState(undefined);
   const [confirmAddition, setConfirmAddition] = useState(false);
   const navigate = useNavigate();
@@ -26,7 +27,7 @@ function Card(props) {
   }, [])
 
   useEffect(()=>{
-    if(isItSaved === 1){
+    if(!isItSaved){
       fetch(`${import.meta.env.VITE_REACT_APP_API}api/uncryptToken`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -53,14 +54,9 @@ function Card(props) {
       })
       .then((data) => {
         data.shoppingCart.map((product) => {
-            console.log("Se va a guardar");
             const onlyTheName = product.split("-")[0];
             if(onlyTheName == props.nameOfProduct){
-              setIsItSaved(2);
-              console.log("GUARDADO")
-              //SEGUI POR ACA
-            }else{
-              setIsItSaved(false);
+              setIsItSaved(true);
             }
           })
       });

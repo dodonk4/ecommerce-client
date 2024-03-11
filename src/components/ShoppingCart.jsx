@@ -5,8 +5,6 @@ import { useUsercontext } from './userContext/UserProvider';
 import { Navigate, useNavigate } from 'react-router-dom';
 import useCatchUserAndProducts from '../hooks/catchUserAndProducts.js'
 import useCatchTotal from '../hooks/catchTotal.js';
-import useCatchProductsInShoppingCart from '../hooks/catchProductsInShoppingCart.js';
-import NoProducts from './NoProducts.jsx';
 
 export default function ShoppingCart() {
 
@@ -17,8 +15,6 @@ export default function ShoppingCart() {
   const [products, setProducts] = useState(null);
   const [loading, setLoading] = useState(true);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [countOfProducts, setCountOfProducts] = useState(0);
-  const [productsInShoppingCart, setProductsInShoppingCart] = useState(undefined);
 
 
   useEffect(()=>{
@@ -42,28 +38,16 @@ export default function ShoppingCart() {
   }, [dataUser, products]);
 
 
-  useEffect(() => {
-
-    const initCatchProductsInShoppingCart = useCatchProductsInShoppingCart();
-    if(dataUser && products) {
-      initCatchProductsInShoppingCart(dataUser, products, setProductsInShoppingCart, setCountOfProducts)
-    }
-
-  }, [dataUser, products])
-
-
-
   if (loading) {
     return <div className='loaderBox'><div className='loader'/></div>
   }
 
-  //  const productsInShoppingCart = dataUser.shoppingCart.map((cartItem) => {
-  //   const [productName, quantity] = cartItem.split('-');
-  //   const productMatched = products.find((product) => product.name === productName);
-
-  //   return productMatched ? { ...productMatched, quantity } : null;
-  // }).filter(Boolean);
-
+  const productsInShoppingCart = dataUser.shoppingCart.map((cartItem) => {
+    const [productName, quantity] = cartItem.split('-');
+    const productMatched = products.find((product) => product.name === productName);
+  
+    return productMatched ? { ...productMatched, quantity } : null;
+  }).filter(Boolean);
 
 
 
@@ -84,19 +68,11 @@ export default function ShoppingCart() {
     <div className='shoppingCart'>
 
       <div className='cartCardsContainer'>
-
-        {
-          countOfProducts === 0 && (
-           <NoProducts></NoProducts>
-          )
-        }
-
-
         {productsInShoppingCart?.map((product)=> {
 
           return ( 
               
-            <CardShoppingCart key={product.name} changeOfCountOfProducts={setCountOfProducts} countOfProducts={countOfProducts} nameOfProduct={product.name} priceOfProduct={product.price.$numberDecimal} quantity={product.quantity} imageOfProduct={product.image} onTotalChange={handleTotal}></CardShoppingCart>
+            <CardShoppingCart key={product.name} nameOfProduct={product.name} priceOfProduct={product.price.$numberDecimal} quantity={product.quantity} imageOfProduct={product.image} onTotalChange={handleTotal}></CardShoppingCart>
               
           )
         })}
