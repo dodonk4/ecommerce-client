@@ -388,6 +388,7 @@ header{
 
 .shoppingCart{
   display: flex;
+  justify-content: center;
 }
 
 .cartCardsContainer{
@@ -402,23 +403,14 @@ header{
 
 .total{
   /* border: solid #707072; */
-  text-align: center;
-  display: flex;
-  justify-content: center;
   background-color: #1b1b1b;
-  /* border-radius: 30px; */
+  border-radius: 30px;
   display: flex;
-  /* margin-top: 20px; */
+  margin-top: 20px;
   width: 25%;
   flex-direction: column;
-  position: fixed;
-  height: 100%;
-  right: 0;
+  justify-content: end;
   align-items: center;
-}
-
-.total h1, .total input {
-  margin-bottom: 30px;
 }
 
 .cartCard{
@@ -473,7 +465,7 @@ input[type=number]::-webkit-inner-spin-button {
 .cartCardDeleteButton{
   margin-left: 30px;
   height: 60px;
-  width: 50px;
+  width: 140px;
   padding: 0px;
   border-radius: 30px;
   background-color: transparent;
@@ -496,6 +488,10 @@ input[type=number]::-webkit-inner-spin-button {
 
 }
 
+.total{
+  display: flex;
+  justify-content: space-around;
+}
 
 .total h3 {
   font-size: 30px;
