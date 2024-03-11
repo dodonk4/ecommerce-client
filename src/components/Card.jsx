@@ -58,17 +58,22 @@ function Card(props) {
         //       setIsItSaved(true);
         //     }
         //   })
-
-        for (let i = 0; i < data.shoppingCart.length; i++) {
-          const onlyTheName = data.shoppingCart[i].split("-")[0];
-          if(onlyTheName == props.nameOfProduct){
-            setIsItSaved(1);
-            break;
-          }else{
-            console.log("se le da false")
-            setIsItSaved(0)
+        if(data.shoppingCart.length > 0){
+          for (let i = 0; i < data.shoppingCart.length; i++) {
+            const onlyTheName = data.shoppingCart[i].split("-")[0];
+            if(onlyTheName == props.nameOfProduct){
+              setIsItSaved(1);
+              break;
+            }else{
+              console.log("se le da false")
+              setIsItSaved(0)
+            }
           }
+        }else{
+          setIsItSaved(0)
         }
+
+        
 
       });
     }
