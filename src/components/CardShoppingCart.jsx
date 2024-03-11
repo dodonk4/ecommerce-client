@@ -76,19 +76,17 @@ export const CardShoppingCart = (props) => {
     {
       !confirmRemoval && (
         <div className='cartCard'>
+          <input className='cartCardDeleteButton' value=' X ' type='button' onClick={() => {
+            if (window.confirm('¿Realmente quieres eliminar este producto?'))
+            setConfirmRemoval(true)
+            props.changeOfCountOfProducts(props.countOfProducts - 1);
+            }}></input>
           <img src={props.imageOfProduct} className='cartCardImage'></img>
           <div className='cartCardTitle'>{props.nameOfProduct}</div>
           <div className='cartCardPrice'>${props.priceOfProduct}</div>
           <div className='cartCardPriceMultiplied'>${price}</div>
           <input className='cartCardQuantity' type='number' value={value} onChange={priceAndTotal} ></input>
-          <input className='cartCardDeleteButton' value='Borrar producto' type='button' onClick={() => {
-            if (window.confirm('¿Realmente quieres eliminar este producto?')){
-              setConfirmRemoval(true)
-              console.log(typeof props.changeOfCountOfProducts)
-              props.changeOfCountOfProducts(props.countOfProducts - 1);
-              console.log(props.countOfProducts)
-            }
-            }}></input>
+          
         </div>
       )
     }
