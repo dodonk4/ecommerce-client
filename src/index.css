@@ -149,6 +149,7 @@ header{
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .cardBody {
@@ -390,7 +391,7 @@ header{
 
 .shoppingCart{
   display: flex;
-  justify-content: center;
+  height: 100%;
 }
 
 .cartCardsContainer{
@@ -416,15 +417,22 @@ header{
 
 .total{
   /* border: solid #707072; */
-  background-color: #1b1b1b;
-  border-radius: 30px;
+  text-align: center;
   display: flex;
-  margin-top: 20px;
+  justify-content: center;
+  background-color: #1b1b1b;
+  display: flex;
   width: 25%;
   flex-direction: column;
-  justify-content: end;
   align-items: center;
+  height: 100%;
+  right: 0;
 }
+
+.total h1, .total input {
+  margin-bottom: 30px;
+}
+
 
 .cartCard{
   display: flex;
@@ -478,7 +486,7 @@ input[type=number]::-webkit-inner-spin-button {
 .cartCardDeleteButton{
   margin-left: 30px;
   height: 60px;
-  width: 140px;
+  width: 50px;
   padding: 0px;
   border-radius: 30px;
   background-color: transparent;
@@ -499,11 +507,6 @@ input[type=number]::-webkit-inner-spin-button {
   transition: all 0.5s ease;
   cursor: pointer;
 
-}
-
-.total{
-  display: flex;
-  justify-content: space-around;
 }
 
 .total h3 {

@@ -20,6 +20,7 @@ import Register from './components/Register'
 function App() {
 
   return (
+    <div className='App'>
       <UserProvider>
       <BrowserRouter>
         <Routes>
@@ -38,6 +39,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       </UserProvider>
+    </div>
   )
 }
 

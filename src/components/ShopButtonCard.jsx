@@ -50,13 +50,13 @@ function ShopButtonCard(props) {
       )
     }
 
-    {
+    {/* {
       !userLogged && (
         <div className='shopCardButton' onClick={goToLogin}>
           Agregar
         </div>
       )
-    }
+    } */}
       
     </>
     
