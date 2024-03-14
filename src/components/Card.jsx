@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 function Card(props) {
 
   // console.log(process.env.REACT_APP_API);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(0);
   
 
   const [isItSaved, setIsItSaved] = useState("loading");
