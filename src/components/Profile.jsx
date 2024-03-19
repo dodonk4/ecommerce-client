@@ -45,7 +45,7 @@ export const Profile = () => {
             }
 
       {/* </div> */}
-    
+      <img className='menuLogo' src="images/menu.png"></img>
       
     </>
   )
