@@ -18,25 +18,35 @@ export const Profile = () => {
 
 
   return (
-    <div className="profileBox" >
-      { user && (
-        <>
-          <h2 className='userName'>{ user }</h2>
-          <NavLink className="loginLink" to="/profile">Profile</NavLink>
-          <NavLink className="loginLink" to="/shoppingCart">Cart</NavLink>
-          <div className="logoutButton" onClick={() => handleLogout()}>Logout</div>
-        </>
-      ) }
+    <>
+      
 
-      {
-        !user && (
-          <div className="logAndRegisterBox">
-            <NavLink className="loginLink" to="/login">Iniciar Sesión</NavLink>
-            <NavLink className="registerLink" to="/register">Registrarse</NavLink>
-          </div>
-         
-        )
-      }
-    </div>
+      {/* <div className="profileBox">  */}
+        
+        { user && (
+          <>
+            <h2 className='userName'>{ user }</h2>
+            <div className="buttonsBox"> 
+                  <NavLink className="loginLink" to="/profile">Profile</NavLink>
+                  <NavLink className="loginLink" to="/shoppingCart">Cart</NavLink>
+            </div>
+            <div className="logoutButton" onClick={() => handleLogout()}>Logout</div>
+          </>
+            ) }
+
+            {
+              !user && (
+                <div className="logAndRegisterBox">
+                  <NavLink className="loginLink" to="/login">Iniciar Sesión</NavLink>
+                  <NavLink className="registerLink" to="/register">Registrarse</NavLink>
+                </div>
+              
+              )
+            }
+
+      {/* </div> */}
+    
+      
+    </>
   )
 }

@@ -31,18 +31,56 @@ header{
 
 .profileBox{
   display: flex;
-  /* flex-direction: column; */
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-  width: 25%;
+  flex: 0.4;
+}
+
+.buttonsBox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.loginLink, .registerLink{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D9D9D9;
+  border: solid #2daf49;
+  background-color: #185024;
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.userName{
+  color: #1b1b1b;
+  background-color: #D9D9D9;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.logoutButton{
+  text-align: center;
+  display: block;
+  color: #D9D9D9;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 30px;
+  border: solid #940909;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 
 .nav{
   display: flex;
-  /* justify-content: ; */
-  width: 50%;
+  flex: 0.6;
+  min-height: 20px;
 }
 
 .nav-2{
@@ -58,13 +96,20 @@ header{
 
 .searchBar{
   display: flex;
-  width: 70%;
+  width: 100%;
   height: 20px;
   padding: 10px 30px;
   background-color: #707072;
   border-radius: 30px;
   border-style: none;
   align-items: center;
+}
+
+.searchLogo{
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  filter: invert(100%) sepia(99%) saturate(1%) hue-rotate(56deg) brightness(108%) contrast(100%);
 }
 
 .logo{
@@ -376,19 +421,6 @@ header{
   cursor: pointer;
 }
 
-.loginLink, .registerLink{
-  text-align: center;
-  display: block;
-  color: #D9D9D9;
-  background-color: darkgoldenrod;
-  text-decoration: none;
-  padding: 5px;
-  width: 150px;
-  border-radius: 30px;
-  margin-right: 20px;
-  font-weight: 600;
-}
-
 .shoppingCart{
   display: flex;
 }
@@ -542,8 +574,9 @@ input[type=number]::-webkit-inner-spin-button {
 
 .logAndRegisterBox{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-self: center;
+  flex: 0.3;
 }
 
 .loginBox{
@@ -552,6 +585,7 @@ input[type=number]::-webkit-inner-spin-button {
   align-items: center;
   flex-direction: column;
   height: 50vw;
+  flex: 0.4;
 }
 
 .loginBox label{
@@ -578,22 +612,6 @@ input[type=number]::-webkit-inner-spin-button {
   padding: 10px;
 }
 
-.userName{
-  margin-right: 20px;
-}
-
-.logoutButton{
-  text-align: center;
-  display: block;
-  color: #D9D9D9;
-  text-decoration: none;
-  padding: 5px;
-  width: 150px;
-  border-radius: 30px;
-  margin-right: 20px;
-  font-weight: 600;
-  cursor: pointer;
-}
 
 .paymentForm{
   width: 100%;
@@ -644,6 +662,17 @@ footer img{
 }
 
 @media all and (max-width: 768px) {
+  .searchBar{
+    display: none;
+  }
+  .nav{
+    justify-content: center;
+  }
+  .searchLogo{
+    margin-right: 0px;
+  }
+
+
   .productBody{
     flex-direction: column;
     height: 800px;
