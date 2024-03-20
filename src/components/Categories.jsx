@@ -86,7 +86,7 @@ function Categories() {
       }
 
       
-      <Footer/>
+      
     </div>
   );
 }

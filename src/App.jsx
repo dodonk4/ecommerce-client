@@ -24,7 +24,7 @@ function App() {
       <UserProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<><Header/><Categories /></>}/>
+          <Route path="/" element={<><Header/><Categories/><Footer/></>}/>
           <Route path="/fafa" element={<><Searching/><Footer/></>}/>
           <Route path="/product" element={<RequireAuth><Product/><Footer/></RequireAuth>}></Route>
           <Route path="/login" element={<Login/>}></Route>

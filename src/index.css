@@ -671,6 +671,7 @@ footer img{
   } */
   .nav{
     justify-content: center;
+    flex: 0.8;
   }
   .logAndRegisterBox{
     display: none;
@@ -685,6 +686,13 @@ footer img{
     display: block;
     width: 40px;
     filter: invert(47%) sepia(6%) saturate(112%) hue-rotate(202deg) brightness(90%) contrast(86%);
+  }
+  .blockOfCategories{
+    display: none;
+  }
+  .listOfCards{
+    overflow: auto;
+    flex-wrap: nowrap;
   }
   /* .searchLogo{
     margin-right: 0px;
