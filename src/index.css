@@ -159,14 +159,12 @@ header{
 .blockOfCategories li{
   padding: 0px 35px 0px 35px;
   line-height: 3;
-  letter-spacing: 12.5px;
   justify-content: center;
   font-style: italic;
   font-size: 20px;
   font-weight: 600;
   color: #707072;
   height: 60px;
-  width: 300px;
   transition: all 0.1s ease-in-out; 
 }
 
@@ -687,12 +685,13 @@ footer img{
     width: 40px;
     filter: invert(47%) sepia(6%) saturate(112%) hue-rotate(202deg) brightness(90%) contrast(86%);
   }
-  .blockOfCategories{
+  /* .blockOfCategories{
     display: none;
-  }
+  } */
   .listOfCards{
     overflow: auto;
     flex-wrap: nowrap;
+    justify-content: flex-start;
   }
   /* .searchLogo{
     margin-right: 0px;
