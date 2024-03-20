@@ -667,6 +667,12 @@ footer img{
   /* .searchBar{
     display: none;
   } */
+
+  .blockOfCategories li {
+    padding: 0 20px;
+    font-size: 16px;
+  }
+
   .nav{
     justify-content: center;
     flex: 0.8;
