@@ -699,6 +699,9 @@ footer img{
     flex-wrap: nowrap;
     justify-content: flex-start;
   }
+  .blockOfCategories li:hover :not(.categorySelected){
+    letter-spacing: 0px;
+  }
   /* .searchLogo{
     margin-right: 0px;
   } */
