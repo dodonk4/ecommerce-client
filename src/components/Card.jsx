@@ -111,8 +111,8 @@ function Card(props) {
       <div className='cardBody' onClick={() => navigateToProduct(props.nameOfProduct)}>
         <img src={props.imageOfProduct} className='cardImage'></img>
         <div className='cardTitle'>{props.nameOfProduct}</div>
-        <div className='cardProductType'>{props.typeOfProduct}</div>
-        <div className='cardDescription'>{props.description}</div>
+        {/* <div className='cardProductType'>{props.typeOfProduct}</div> */}
+        {/* <div className='cardDescription'>{props.description}</div> */}
         <div className='cardPrice'>${props.priceOfProduct}</div>
       </div>
     

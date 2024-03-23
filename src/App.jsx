@@ -15,7 +15,7 @@ import PaymentSuccesful from './components/PaymentSuccesful'
 import Footer from './components/Footer'
 import HeaderStatic from './components/HeaderStatic'
 import Register from './components/Register'
-
+import Hero from './components/Hero'
 
 function App() {
 
@@ -25,6 +25,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<><Header/><Categories/><Footer/></>}/>
+          <Route path="/hero" element={<><Header/><Hero/></>}/>
           <Route path="/fafa" element={<><Searching/><Footer/></>}/>
           <Route path="/product" element={<RequireAuth><Product/><Footer/></RequireAuth>}></Route>
           <Route path="/login" element={<Login/>}></Route>

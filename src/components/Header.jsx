@@ -27,8 +27,14 @@ function Header() {
     <header className='header'>
       <img className='logo' src='images/logo.png'></img>
         <nav className='nav'>
-              <img className="searchLogo" src="images/lupa.png"></img>
-              <input value={inputValue} onChange={handleInputChange} onKeyDown={handleEnterPress} className='searchBar' type='text' placeholder='buscar...'></input>
+        {/* <ul className='header'>
+            <li>ff</li>
+            <li>f</li>
+            <li>ff</li>
+            <li>f</li>
+          </ul> */}
+          <img className="searchLogo" src="images/lupa.png"></img>
+          <input value={inputValue} onChange={handleInputChange} onKeyDown={handleEnterPress} className='searchBar' type='text' placeholder='buscar...'></input>
         </nav>
         
 
