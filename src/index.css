@@ -15,6 +15,7 @@ header{
   z-index: 10;
   width: 100%;
   background-color: #161515;
+  box-shadow: 0px 50px 40px rgba(0, 0, 0, 0.2);
 }
 
 .hiddenMenu{
@@ -154,7 +155,7 @@ header{
   background-color: #161515;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 50px 40px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0px 50px 40px rgba(0, 0, 0, 0.2); */
 }
 
 .logo{
