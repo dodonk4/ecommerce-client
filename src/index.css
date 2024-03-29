@@ -12,14 +12,22 @@ body {
 header{
   position: sticky;
   top: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #161515;
+}
+
+.hiddenMenu{
+  height: 100%;
+  background-color: #185024;
+}
+
+.mainHeader{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  z-index: 10;
-  /* color: #FFF; */
   width: 100%;
-  background-color: #1E1E1E;
-  box-shadow: 0px 50px 40px rgba(0, 0, 0, 0.2);
+  background-color: #161515;
 }
 
 .App{
@@ -48,9 +56,9 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #D9D9D9;
+  color: #000;
   border: solid #2daf49;
-  background-color: #185024;
+  background-color: #2daf49;
   text-decoration: none;
   padding: 5px 20px;
   border-radius: 30px;
@@ -78,8 +86,9 @@ header{
 
 
 .nav{
+  flex: 1;
   display: flex;
-  flex: 0.6;
+  justify-content: center;
   min-height: 20px;
 }
 
@@ -94,25 +103,62 @@ header{
   text-decoration: none;
 }
 
+.navOptions{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+
+.navOptions li{
+  list-style: none;
+  color: #D9D9D9;
+  font-weight: bold;
+  margin-right: 20px;
+  text-align: center;
+}
+
 .searchBar{
   display: flex;
-  width: 100%;
+  width: 50%;
   height: 20px;
   padding: 10px 30px;
-  background-color: #707072;
+  background-color: #000;
+  border: solid #707072;
   border-radius: 30px;
-  border-style: none;
+  /* border-style: none; */
   align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out; 
+}
+
+.searchBar:hover{
+  background-color: #707072;
 }
 
 .searchLogo{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   margin-right: 20px;
   filter: invert(100%) sepia(99%) saturate(1%) hue-rotate(56deg) brightness(108%) contrast(100%);
 }
 
+.searchDiv{
+  display: flex;
+  background-color: #161515;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 50px 40px rgba(0, 0, 0, 0.2);
+}
+
 .logo{
+  /* flex: 1; */
   width: 90px;
   margin: 0px 30px;
 }
@@ -580,7 +626,11 @@ input[type=number]::-webkit-inner-spin-button {
   display: flex;
   justify-content: space-around;
   align-self: center;
-  flex: 0.3;
+  /* margin-left: auto; */
+}
+
+.logAndRegisterBox a {
+  margin-right: 20px;
 }
 
 .loginBox{
@@ -671,6 +721,34 @@ footer img{
 }
 
 @media all and (max-width: 768px) {
+
+  .nav{
+    background-color: #1E1E1E;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+
+  .notShownInResponsive{
+    right: 100%;
+  }
+
+  .shownInResponsive{
+    right: 0%;
+  }
+
+  .navOptions{
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 35px;
+    height: 100%;
+  }
+
   .blockOfCategories li {
     padding: 0 20px;
     font-size: 13px;
@@ -680,23 +758,23 @@ footer img{
     width: auto;
   }
 
-  .nav{
-    justify-content: center;
-    flex: 0.8;
-  }
+
   .logAndRegisterBox{
     display: none;
   }
   .logo{
-    display: none;
+    /* display: none; */
+    order: 2;
   }
   .header{
     padding: 20px 0px;
   }
   .menuLogo{
+    order: 1;
     display: block;
     width: 40px;
     filter: invert(47%) sepia(6%) saturate(112%) hue-rotate(202deg) brightness(90%) contrast(86%);
+    z-index: 3;
   }
   .listOfCards{
     overflow: auto;

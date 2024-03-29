@@ -10,7 +10,7 @@ function Header() {
 
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState('');
-
+  const [classState, setClassState] = useState("notShownInResponsive");
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -23,25 +23,40 @@ function Header() {
     }
   };
 
+  const changeClass = () => {
+    if(classState === "notShownInResponsive"){
+      setClassState("shownInResponsive");
+    }else{
+      setClassState("notShownInResponsive");
+    }
+    console.log(classState);
+
+  }
+
+
   return (
-    <header className='header'>
-      <img className='logo' src='images/logo.png'></img>
-        <nav className='nav'>
-        {/* <ul className='header'>
-            <li>ff</li>
-            <li>f</li>
-            <li>ff</li>
-            <li>f</li>
-          </ul> */}
-          <img className="searchLogo" src="images/lupa.png"></img>
-          <input value={inputValue} onChange={handleInputChange} onKeyDown={handleEnterPress} className='searchBar' type='text' placeholder='buscar...'></input>
-        </nav>
-        
+    <>
+      <header className='header'>
 
+        <div className='mainHeader'>
+          <img className='logo' src='images/logo.png'></img>
+          <nav className={'nav ' + classState}>
+            <ul className='navOptions'>
+              <li>INICIO</li>
+              <li>CATEGORIAS</li>
+              <li>SOBRE NOSOTROS</li>
+            </ul>
+            {/* <img className="searchLogo" src="images/lupa.png"></img> */}
+          </nav>
+          <Profile key="profile" changeClass={changeClass}></Profile>
+        </div>      
 
-        <Profile></Profile>
-     
-    </header>
+      <div className='searchDiv'>
+        <input value={inputValue} onChange={handleInputChange} onKeyDown={handleEnterPress} className='searchBar' type='text' placeholder='buscar...'></input>
+      </div>
+
+      </header>
+    </>
   )
 }
 

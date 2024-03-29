@@ -3,9 +3,10 @@ import { useTogglecontext, useUsercontext } from './userContext/UserProvider'
 
 //REVISAR PORQUE ESTA MAL TODO LO DEL AUTHCONTEXT
 
-export const Profile = () => {
+export const Profile = (props) => {
 
     const navigate = useNavigate();
+    // const nav = document.getElementByClassName("nav");
 
     const user = useUsercontext();
     const toggle = useTogglecontext();
@@ -16,6 +17,7 @@ export const Profile = () => {
       navigate('/');
     }
 
+    
 
   return (
     <>
@@ -45,7 +47,7 @@ export const Profile = () => {
             }
 
       {/* </div> */}
-      <img className='menuLogo' src="images/menu.png"></img>
+      <img className='menuLogo' src="images/menu.png" onClick={props.changeClass}></img>
       
     </>
   )
