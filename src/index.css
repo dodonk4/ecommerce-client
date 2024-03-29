@@ -766,6 +766,7 @@ footer img{
   .logo{
     /* display: none; */
     order: 2;
+    margin: 0;
   }
   .header{
     padding: 20px 0px;
