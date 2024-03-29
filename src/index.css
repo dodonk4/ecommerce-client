@@ -746,8 +746,8 @@ footer img{
   .navOptions{
     flex-direction: column;
     justify-content: space-around;
-    font-size: 35px;
-    height: 100%;
+    font-size: 25px;
+    height: 70%;
   }
 
   .blockOfCategories li {
