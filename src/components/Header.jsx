@@ -42,20 +42,21 @@ function Header() {
           <img className='logo' src='images/logo.png'></img>
           <nav className={'nav ' + classState}>
             <ul className='navOptions'>
-              <li>INICIO</li>
-              <li>CATEGORIAS</li>
-              <li>SOBRE NOSOTROS</li>
+              <NavLink className="fakeLi" to="/">INICIO</NavLink>
+              <NavLink className="fakeLi" to="/categories">CATEGORIAS</NavLink>
+              <NavLink className="fakeLi" to="/about-us">SOBRE NOSOTROS</NavLink>
             </ul>
             {/* <img className="searchLogo" src="images/lupa.png"></img> */}
           </nav>
           <Profile key="profile" changeClass={changeClass}></Profile>
         </div>      
 
+     
+
+      </header>
       <div className='searchDiv'>
         <input value={inputValue} onChange={handleInputChange} onKeyDown={handleEnterPress} className='searchBar' type='text' placeholder='buscar...'></input>
       </div>
-
-      </header>
     </>
   )
 }

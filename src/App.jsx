@@ -16,6 +16,7 @@ import Footer from './components/Footer'
 import HeaderStatic from './components/HeaderStatic'
 import Register from './components/Register'
 import Hero from './components/Hero'
+import ContentAfterHero from './components/ContentAfterHero'
 
 function App() {
 
@@ -24,8 +25,8 @@ function App() {
       <UserProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<><Header/><Categories/><Footer/></>}/>
-          <Route path="/hero" element={<><Header/><Hero/></>}/>
+          <Route path="/categories" element={<><Header/><Categories/><Footer/></>}/>
+          <Route path="/" element={<><Header/><Hero/><ContentAfterHero/></>}/>
           <Route path="/fafa" element={<><Searching/><Footer/></>}/>
           <Route path="/product" element={<RequireAuth><Product/><Footer/></RequireAuth>}></Route>
           <Route path="/login" element={<Login/>}></Route>
