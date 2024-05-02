@@ -4,7 +4,7 @@ function ContentAfterHero() {
   return (
     <section id='ContentAfterHero' className='contentAfterHeroBox'>
         <div className='contentAfterHero'>
-            <div className='promo1 promo'>
+            {/* <div className='promo1 promo'>
               <img className="promo1Image" src='images/gtx1660.png'></img>
               <div className='promosText promoTextAfterHero'>
                 <div>COMPONENTES</div>
@@ -40,7 +40,7 @@ function ContentAfterHero() {
               <div className='promosText promoTextAfterHero'>
                 <div>COMPUTADORAS</div>
               </div>
-            </div>
+            </div> */}
         </div>
         
 

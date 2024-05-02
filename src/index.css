@@ -248,7 +248,7 @@ header{
   flex-wrap: wrap;
 }
 
-.promoButton{
+ .promoButton{
   padding: 3vw;
   font-size: 3vw;
   font-weight: bold;
@@ -258,7 +258,7 @@ header{
   cursor: pointer;
   border-style: none;
 }
-
+/*
 .promo{
   font-size: 2vw;
   height: 17.5vw;
@@ -281,7 +281,6 @@ header{
   justify-content: space-around;
   align-items: center;
   width: 62%;
-  /* font-size: 30px; */
   font-weight: bold;
   color: #000;
   background: #a20909;
@@ -318,7 +317,6 @@ header{
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  /* font-size: 25px; */
   width: 30%;
   background: rgb(245,235,235);
   background: linear-gradient(308deg, #185024 39%, rgba(0,0,0,1) 100%);
@@ -355,7 +353,6 @@ header{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* font-size: 25px; */
   width: 30%;
   background: rgb(245,235,235);
   background: linear-gradient(308deg, #185024 39%, rgba(0,0,0,1) 100%);
@@ -394,7 +391,6 @@ header{
   justify-content: space-around;
   align-items: center;
   width: 62%;
-  /* font-size: 30px; */
   font-weight: bold;
   color: #000;
   background: #a20909;
@@ -432,7 +428,6 @@ header{
   justify-content: space-around;
   align-items: center;
   width: 45%;
-  /* font-size: 30px; */
   font-weight: bold;
   color: #000;
   background: #a20909;
@@ -471,7 +466,6 @@ header{
   justify-content: space-around;
   align-items: center;
   width: 45%;
-  /* font-size: 30px; */
   font-weight: bold;
   color: #000;
   background: #a20909;
@@ -500,7 +494,7 @@ header{
   max-width: 12vw;
   max-height: 100%;
   transition: all ease 0.5s;
-}
+} */
 
 
 #Categories{
