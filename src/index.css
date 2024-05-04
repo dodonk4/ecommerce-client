@@ -1,3 +1,9 @@
+:root{
+  --fs-400: clamp(3px, 2vw, 20px);
+  --fs-500: clamp(5px, 3vw, 30px);
+  --fs-600: clamp(10px, 8vw, 50px);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -207,20 +213,16 @@ header{
   text-align: center;
 }
 
-.heroPromoText{
-  height: 30vw;
-}
-
 .heroText1Subtitle{
-  font-size: 3vw;
+  font-size: var(--fs-500);
 }
 
 .heroText1Title{
-  font-size: 4vw;
+  font-size: var(--fs-600);
 }
 
 .heroText1Footer{
-  font-size: 2vw;
+  font-size: var(--fs-400);
 }
 
 .heroText2{
@@ -257,14 +259,14 @@ header{
   cursor: pointer;
   border-style: none;
 }
-/*
+
 .promo{
   font-size: 2vw;
   height: 17.5vw;
   margin: 10px 5px;
   border-radius: 30px;
 }
-
+/*
 .promo:hover{
   padding: 2.5px;
 }

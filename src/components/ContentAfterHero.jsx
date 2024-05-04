@@ -4,12 +4,13 @@ function ContentAfterHero() {
   return (
     <section id='ContentAfterHero' className='contentAfterHeroBox'>
         <div className='contentAfterHero'>
-            {/* <div className='promo1 promo'>
+             {/*<div className='promo1 promo'>
               <img className="promo1Image" src='images/gtx1660.png'></img>
               <div className='promosText promoTextAfterHero'>
                 <div>COMPONENTES</div>
               </div>
             </div>
+            
             <div className='promo2 promo'>
               <img className="promo2Image" src='images/flip.png'></img>
               <div className='promosText promoTextAfterHero'>
