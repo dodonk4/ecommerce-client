@@ -4,10 +4,18 @@
   --fs-600: clamp(10px, 8vw, 50px);
 }
 
+html, body{
+  height: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
+}
+
+#root{
+  height: 100%;
 }
 
 body {
@@ -38,7 +46,7 @@ header{
 }
 
 .App{
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -161,6 +169,7 @@ header{
   background-color: #161515;
   justify-content: center;
   align-items: center;
+  flex: 1;
   /* box-shadow: 0px 50px 40px rgba(0, 0, 0, 0.2); */
 }
 
@@ -177,7 +186,6 @@ header{
 #Hero{
   display: flex;
   width: 100%;
-  height: 600px;
   justify-content: center;
   align-items: center;
 }
@@ -256,7 +264,7 @@ header{
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 160%;
 }
 
 .contentAfterHero{
@@ -264,6 +272,11 @@ header{
   width: 80%;
   height: 100%;
   flex-wrap: wrap;
+}
+
+.contentAfterHero::-webkit-scrollbar-thumb {
+  background-color: darkgray; /* Color del pulgar */
+  border-radius: 5px; /* Bordes redondeados del pulgar */
 }
 
  .promoButton{
@@ -332,39 +345,37 @@ header{
   opacity: 0;
 }
 
-.promo1Image{
-  max-width: 15vw;
+.promoImage{
+  max-width: 150px;
   max-height: 100%;
+  transition: all ease 0.5s;
 }
 
 .promo2Image{
-  max-width: 7.5vw;
+  /* max-width: 7.5vw; */
+  max-width: 100px;
   max-height: 100%;
   transition: all ease 0.5s;
 }
 
-.promo3Image{
-  max-width: 10vw;
-  max-height: 100%;
-  transition: all ease 0.5s;
+@media all and (max-width: 720px){
+  .promoImage{
+    max-width: 100px;
+  }
+
+  .promo2Image{
+    max-width: 75px;
+  }
 }
 
-.promo4Image{
-  max-width: 15vw;
-  max-height: 100%;
-  transition: all ease 0.5s;
-}
+@media all and (max-width: 420px){
+  .promoImage{
+    max-width: 75px;
+  }
 
-.promo5Image{
-  max-width: 15vw;
-  max-height: 100%;
-  transition: all ease 0.5s;
-}
-
-.promo6Image{
-  max-width: 12vw;
-  max-height: 100%;
-  transition: all ease 0.5s;
+  .promo2Image{
+    max-width: 50px;
+  }
 }
 
 
@@ -373,6 +384,7 @@ header{
   flex-direction: column;
   align-items: center;
   background-color: #161515;
+  flex: 2;
 }
 
 /* .categorySelector{
@@ -901,7 +913,7 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
-
+  /* margin-top: 65px; */
 }
 
 footer img{
