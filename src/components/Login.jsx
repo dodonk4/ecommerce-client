@@ -37,20 +37,30 @@ export const Login = () => {
     }
 
   return (
+    <div className='loginEnviroment'>
       <div className='loginBox'>
-        LOGIN:
-        <label className='loginUsername'>
-            Username: <input type='text' onChange={e => setUser(e.target.value)}></input>
-        </label>
-        <label className='loginPassword'>
-            Password: <input type='password' onChange={e => setPassword(e.target.value)}></input>
-        </label>
+        <b className='loginTitle'>INICIAR SESIÓN</b>
+        <div className='usernameBox'>
+          <b className='usernameTitle'>USUARIO</b>
+          <label className='loginUsername'>
+              <input type='text' onChange={e => setUser(e.target.value)}></input>
+          </label>
+        </div>
+        
+        <div className='passwordBox'>
+          <b className='passwordTitle'>CONTRASEÑA</b>
+          <label className='loginPassword'>
+              <input type='password' onChange={e => setPassword(e.target.value)}></input>
+          </label>
+        </div>
+        
         {errorMessage == "true" && (
-          <p>Wrong username or password</p>
+          <p>Usuario o contraseña incorrectos</p>
         )}
-        <button className='loginButton' onClick={() => handleLogin(user, password)}>Login</button>
+        <button className='loginButton' onClick={() => handleLogin(user, password)}>INICIAR SESIÓN</button>
 
       </div>
+    </div>
     
   )
 }
