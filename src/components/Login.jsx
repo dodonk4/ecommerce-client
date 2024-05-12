@@ -37,17 +37,17 @@ export const Login = () => {
     }
 
   return (
-    <div className='loginEnviroment'>
-      <div className='loginBox'>
-        <b className='loginTitle'>INICIAR SESIÓN</b>
-        <div className='usernameBox'>
+    <div className='formEnviroment'>
+      <div className='formBox'>
+        <b className='formTitle'>INICIAR SESIÓN</b>
+        <div className='labelBox'>
           <b className='usernameTitle'>USUARIO</b>
           <label className='loginUsername'>
               <input type='text' onChange={e => setUser(e.target.value)}></input>
           </label>
         </div>
         
-        <div className='passwordBox'>
+        <div className='labelBox'>
           <b className='passwordTitle'>CONTRASEÑA</b>
           <label className='loginPassword'>
               <input type='password' onChange={e => setPassword(e.target.value)}></input>
@@ -55,9 +55,9 @@ export const Login = () => {
         </div>
         
         {errorMessage == "true" && (
-          <p>Usuario o contraseña incorrectos</p>
+          <p>USUARIO O CONTRASEÑA INCORRECTOS</p>
         )}
-        <button className='loginButton' onClick={() => handleLogin(user, password)}>INICIAR SESIÓN</button>
+        <button className='formButton' onClick={() => handleLogin(user, password)}>INICIAR SESIÓN</button>
 
       </div>
     </div>

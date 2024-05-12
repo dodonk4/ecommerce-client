@@ -38,25 +38,46 @@ function Register() {
 
 
   return (
-    <div className='loginBox'>
-        REGISTER:
-        <label className='loginUsername'>
-            Username: <input type='text' onChange={e => setUser(e.target.value)}></input>
-        </label>
-        <label className='loginEmail'>
-            Email: <input type='text' onChange={e => setEmail(e.target.value)}></input>
-        </label>
-        <label className='loginPassword'>
-            Password: <input type='password' onChange={e => setPasswordConfirmation(e.target.value)}></input>
-        </label>
-        <label className='loginPassword'>
-            Confirm Password: <input type='password' onChange={e => setPassword(e.target.value)}></input>
-        </label>
-        {errorMessage == "true" && (
-          <p>Wrong username or password</p>
-        )}
-        <button className='loginButton' onClick={() => handleRegister(user, password)}>Register</button>
+    <div className='formEnviroment'>
+      <div className='formBox'>
+        <b className='formTitle'>REGISTRARSE</b>
+        <div className='labelBox'>
+          <b>USUARIO</b>
+          <label className='loginUsername'>
+            <input type='text' onChange={e => setUser(e.target.value)}></input>
+          </label>
+        </div>
+       
+        <div className='labelBox'>
+          <b>CORREO ELECTRÓNICO</b>
+          <label className='loginEmail'>
+            <input type='text' onChange={e => setEmail(e.target.value)}></input>
+          </label>
+        </div>
 
+        <div className='labelBox'>
+          <b>CONTRASEÑA</b>
+          <label className='loginPassword'>
+            <input type='password' onChange={e => setPasswordConfirmation(e.target.value)}></input>
+          </label>
+        </div>
+        
+       
+
+        <div className='labelBox'>
+          <b>CONFIRMAR CONTRASEÑA</b>
+          <label className='loginPassword'>
+            <input type='password' onChange={e => setPassword(e.target.value)}></input>
+          </label>
+        </div>
+        
+        {errorMessage == "true" && (
+          <p>USUARIO O CONTRASEÑA INCORRECTOS</p>
+        )}
+        <button className='formButton' onClick={() => handleRegister(user, password)}>REGISTRARSE</button>
+
+      </div>
+        
       </div>
   )
 }
