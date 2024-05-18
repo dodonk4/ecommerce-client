@@ -26,21 +26,21 @@ export const Profile = (props) => {
       {/* <div className="profileBox">  */}
         
         { user && (
-          <>
-            <h2 className='userName'>{ user }</h2>
+          <div className='headerProfilebox'>
+            {/* <h2 className='userName'>{ user }</h2> */}
             <div className="buttonsBox"> 
-                  <NavLink className="loginLink" to="/profile">Profile</NavLink>
-                  <NavLink className="loginLink" to="/shoppingCart">Cart</NavLink>
+                  <NavLink className="loginLink" to="/profile">PERFIL</NavLink>
+                  <NavLink className="loginLink" to="/shoppingCart">CARRITO</NavLink>
             </div>
-            <div className="logoutButton" onClick={() => handleLogout()}>Logout</div>
-          </>
+            <div className="logoutButton" onClick={() => handleLogout()}>CERRAR SESIÓN</div>
+          </div>
             ) }
 
             {
               !user && (
-                <div className="logAndRegisterBox">
-                  <NavLink className="loginLink" to="/login">Iniciar Sesión</NavLink>
-                  <NavLink className="registerLink" to="/register">Registrarse</NavLink>
+                <div className="headerProfilebox">
+                  <NavLink className="loginLink" to="/login">INICIAR SESIÓN</NavLink>
+                  <NavLink className="registerLink" to="/register">REGISTRARSE</NavLink>
                 </div>
               
               )

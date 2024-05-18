@@ -30,7 +30,10 @@ header{
   width: 100%;
   background-color: #161515;
   box-shadow: 0px 50px 40px rgba(0, 0, 0, 0.2);
+  font-size: clamp(12px, 8vw + 1px, 13.5px);
 }
+
+ 
 
 .hiddenMenu{
   height: 100%;
@@ -64,6 +67,14 @@ header{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-left: 10px;
+}
+
+.headerProfilebox{
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+  /* margin-left: auto; */
 }
 
 .loginLink, .registerLink{
@@ -77,6 +88,7 @@ header{
   text-decoration: none;
   padding: 5px 20px;
   border-radius: 30px;
+  margin: 0px 20px;
   font-weight: 600;
 }
 
@@ -97,6 +109,7 @@ header{
   border: solid #940909;
   font-weight: 600;
   cursor: pointer;
+  margin: 0px 20px;
 }
 
 
@@ -222,20 +235,6 @@ header{
   height: 300px;
 }
 
-@media all and (max-width: 720px){
-  .promosText{
-    height: 250px;
-  }
-  
-}
-
-@media all and (max-width: 420px){
-  .promosText{
-    height: 175px;
-  }
-  
-}
-
 .heroText1Subtitle{
   font-size: var(--fs-500);
   margin-bottom: 10px;
@@ -288,18 +287,6 @@ header{
   color: #D9D9D9;
   cursor: pointer;
   border-style: none;
-}
-
-@media all and (max-width: 720px){
-  .promoButton{
-    padding: 20px;
-  }
-}
-
-@media all and (max-width: 420px){
-  .promoButton{
-    padding: 15px;
-  }
 }
 
 .promo{
@@ -358,25 +345,7 @@ header{
   transition: all ease 0.5s;
 }
 
-@media all and (max-width: 720px){
-  .promoImage{
-    max-width: 100px;
-  }
 
-  .promo2Image{
-    max-width: 75px;
-  }
-}
-
-@media all and (max-width: 420px){
-  .promoImage{
-    max-width: 75px;
-  }
-
-  .promo2Image{
-    max-width: 50px;
-  }
-}
 
 
 #Categories{
@@ -824,12 +793,7 @@ input[type=number]::-webkit-inner-spin-button {
   transition: all 0.5s ease;
 }
 
-.logAndRegisterBox{
-  display: flex;
-  justify-content: space-around;
-  align-self: center;
-  /* margin-left: auto; */
-}
+
 
 .logAndRegisterBox a {
   margin-right: 20px;
@@ -873,12 +837,7 @@ input[type=number]::-webkit-inner-spin-button {
   font-size: 20px
 }
 
-@media (max-width: 500px) {
-  .formBox label input{
-    width: 250px;
-  }
 
-}
 
 
 .formTitle{
@@ -1045,6 +1004,55 @@ footer img{
     height: 200px;
     margin-left: unset;
   }
+
+  .headerProfilebox{
+    display: none;
+  }
+  
+}
+
+@media all and (max-width: 720px){
+  .promoImage{
+    max-width: 100px;
+  }
+
+  .promo2Image{
+    max-width: 75px;
+  }
+
+  .promoButton{
+    padding: 20px;
+  }
+
+  .promosText{
+    height: 250px;
+  }
+}
+
+@media (max-width: 500px) {
+  .formBox label input{
+    width: 250px;
+  }
+
+}
+
+
+@media all and (max-width: 420px){
+  .promoImage{
+    max-width: 75px;
+  }
+
+  .promo2Image{
+    max-width: 50px;
+  }
+
+  .promoButton{
+    padding: 15px;
+  }
+
+  .promosText{
+    height: 175px;
+  }
   
 }
 
@@ -1063,4 +1071,8 @@ footer img{
   }
 }
 
-
+@media all and (max-width: 900px){
+  header{
+    font-size: clamp(9px, 8vw + 1px, 10px);
+  }
+ }

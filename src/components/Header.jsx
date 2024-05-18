@@ -54,9 +54,9 @@ function Header() {
      
 
       </header>
-      <div className='searchDiv'>
+      {/* <div className='searchDiv'>
         <input value={inputValue} onChange={handleInputChange} onKeyDown={handleEnterPress} className='searchBar' type='text' placeholder='buscar...'></input>
-      </div>
+      </div> */}
     </>
   )
 }

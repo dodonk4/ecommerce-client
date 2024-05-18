@@ -17,6 +17,7 @@ import HeaderStatic from './components/HeaderStatic'
 import Register from './components/Register'
 import Hero from './components/Hero'
 import ContentAfterHero from './components/ContentAfterHero'
+import SearchBar from './components/SearchBar'
 
 function App() {
 
@@ -25,14 +26,14 @@ function App() {
       <UserProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/categories" element={<><Header/><Categories/><Footer/></>}/>
-          <Route path="/" element={<><Header/><Hero/><ContentAfterHero/><Footer/></>}/>
+          <Route path="/categories" element={<><Header/><SearchBar/><Categories/><Footer/></>}/>
+          <Route path="/" element={<><Header/><SearchBar/><Hero/><ContentAfterHero/><Footer/></>}/>
           <Route path="/fafa" element={<><Searching/><Footer/></>}/>
-          <Route path="/product" element={<RequireAuth><Product/><Footer/></RequireAuth>}></Route>
+          <Route path="/product" element={<RequireAuth><SearchBar/><Product/><Footer/></RequireAuth>}></Route>
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/register" element={<Register/>}></Route>
           <Route path="/profile" element={<RequireAuth><ProfilePage/><Footer/></RequireAuth>}></Route>
-          <Route path="/shoppingCart" element={<RequireAuth><HeaderStatic/><ShoppingCart/><Footer/></RequireAuth>}></Route>
+          <Route path="/shoppingCart" element={<RequireAuth><Header/><ShoppingCart/><Footer/></RequireAuth>}></Route>
           {/* <Route path="/payment" element={<Elements stripe={stripePromise}><CardElement options={{style: style}}></CardElement></Elements>}></Route> */}
           <Route path="/payment-2" element={<RequireAuth><Payment></Payment><Footer/></RequireAuth>}></Route>
           <Route path="/payment-succesful" element={<RequireAuth><PaymentSuccesful></PaymentSuccesful><Footer/></RequireAuth>}></Route>
