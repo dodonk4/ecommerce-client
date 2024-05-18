@@ -65,7 +65,6 @@ function Card(props) {
               setIsItSaved(1);
               break;
             }else{
-              console.log("se le da false")
               setIsItSaved(0)
             }
           }

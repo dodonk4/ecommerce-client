@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import Card from './Card.jsx';
 import Footer from './Footer.jsx';
+import { useParams } from 'react-router-dom';
 
 function Categories() {
 
-  console.log(import.meta.env.VITE_REACT_APP_API)
+  console.log(import.meta.env.VITE_REACT_APP_API);
+  
 
+  const { category } = useParams();
   const [data, setData] = useState(null);
   const [categ, setCateg] = useState("Celulares");
-  const [activation, setActivation] = useState(false);
+  const [activation, setActivation] = useState(false);//NO SE USA
 
   const categories = ["Celulares", "Componentes", "Televisores", "Perifericos", "Parlantes", "Computadoras"];
 
-  const [categoryClasses, setCategoryClasses] = useState({
+  const [categoryClasses, setCategoryClasses] = useState({//Sirve para el CSS
     "Celulares": "categorySelected",
     "Componentes": "",
     "Televisores": "",
@@ -21,6 +24,8 @@ function Categories() {
     "Computadoras": ""
   });
 
+
+
   const selectCategory = (category) => {
     setCateg(category);
     setCategoryClasses((prevClasses) => ({
@@ -28,6 +33,8 @@ function Categories() {
       [category]: "categorySelected"
     }));
   };
+
+  
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_REACT_APP_API}api/products`)
@@ -40,6 +47,16 @@ function Categories() {
         return setData(data)
       });
   }, []);
+
+
+  useEffect(() => {
+    if(category){
+      let aux = category.charAt(0).toUpperCase() + category.slice(1);
+      if (categories.includes(aux)) {
+        selectCategory(aux);
+      }
+    }  
+  }, [category]);
 
   return (
     <div id='Categories'>
@@ -60,6 +77,7 @@ function Categories() {
       )}
 
       {
+        
         data && (
 
           <ul className='listOfCards'>

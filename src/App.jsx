@@ -27,6 +27,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/categories" element={<><Header/><SearchBar/><Categories/><Footer/></>}/>
+          <Route path="/categories/:category" element={<><Header/><SearchBar/><Categories/><Footer/></>}/>
           <Route path="/" element={<><Header/><SearchBar/><Hero/><ContentAfterHero/><Footer/></>}/>
           <Route path="/fafa" element={<><Searching/><Footer/></>}/>
           <Route path="/product" element={<RequireAuth><SearchBar/><Product/><Footer/></RequireAuth>}></Route>
