@@ -29,7 +29,7 @@ header{
   z-index: 10;
   width: 100%;
   background-color: #161515;
-  box-shadow: 0px 50px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 50px 40px rgba(61, 61, 61, 0.2);
   font-size: clamp(12px, 8vw + 1px, 13.5px);
 }
 
@@ -649,6 +649,9 @@ header{
 
 .shoppingCart{
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cartCardsContainer{
@@ -656,7 +659,6 @@ header{
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 75%;
 }
 
 .noProducts{
@@ -673,11 +675,12 @@ header{
 .total{
   /* border: solid #707072; */
   text-align: center;
+  border-top: solid #D9D9D9;
+  padding-top: 50px;
   display: flex;
   justify-content: center;
-  background-color: #1b1b1b;
   display: flex;
-  width: 25%;
+  width: 50%;
   flex-direction: column;
   align-items: center;
   height: 100%;
@@ -740,28 +743,26 @@ input[type=number]::-webkit-inner-spin-button {
 
 .cartCardDeleteButton{
   margin-left: 30px;
-  height: 60px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   padding: 0px;
   border-radius: 30px;
-  background-color: transparent;
-  border-style: solid;
+  background-color: #a20909;
+  color: #000;
+  border-style: none;
   border-width: 1px;
   border-color: #D9D9D9;
   font-size: 14px;
   font-weight: 600;
-  color: #D9D9D9;
   text-align: center;
   transition: all 0.5s ease;
 
 }
 
 .cartCardDeleteButton:hover{
-  background-color: #D9D9D9;
-  color: #1E1E1E;
+  color: #D9D9D9;
   transition: all 0.5s ease;
   cursor: pointer;
-
 }
 
 .total h3 {

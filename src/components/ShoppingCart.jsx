@@ -103,14 +103,6 @@ export default function ShoppingCart() {
         })}
       </div>
       <div className='total'>
-        {/* {
-          productsInShoppingCart?.map((product)=> {
-            return (
-              // <h3>{product.price * product.quantity}</h3>
-              <h3><b>{product.quantity} x {product.price.$numberDecimal} = </b> {product.price.$numberDecimal * product.quantity}</h3>
-            )
-          })
-        } */}
         <h1>TOTAL: {totalPrice}</h1>
         <input type='button' value='COMPRAR' className='shoppingCartBuyButton' onClick={goToPayment} />
       </div>
