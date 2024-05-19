@@ -126,8 +126,6 @@ function Product() {
 
   return (
     <>
-
-      <HeaderStatic></HeaderStatic>
       <input type="button" className='goBackButton' value="<" onClick={goBack}></input>
 
       {!data && (

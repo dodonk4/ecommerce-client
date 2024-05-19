@@ -39,7 +39,7 @@ function Header() {
       <header className='header'>
 
         <div className='mainHeader'>
-          <img className='logo' src='images/logo.png'></img>
+          <img className='logo' src='../images/logo.png'></img>
           <nav className={'nav ' + classState}>
             <ul className='navOptions'>
               <NavLink className="fakeLi" to="/">INICIO</NavLink>

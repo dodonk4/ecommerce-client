@@ -30,7 +30,7 @@ function App() {
           <Route path="/categories/:category" element={<><Header/><SearchBar/><Categories/><Footer/></>}/>
           <Route path="/" element={<><Header/><SearchBar/><Hero/><ContentAfterHero/><Footer/></>}/>
           <Route path="/fafa" element={<><Searching/><Footer/></>}/>
-          <Route path="/product" element={<RequireAuth><SearchBar/><Product/><Footer/></RequireAuth>}></Route>
+          <Route path="/product" element={<RequireAuth><Header/><SearchBar/><Product/><Footer/></RequireAuth>}></Route>
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/register" element={<Register/>}></Route>
           <Route path="/profile" element={<RequireAuth><ProfilePage/><Footer/></RequireAuth>}></Route>
