@@ -13,7 +13,6 @@ import Payment from './components/Payment'
 import { Profile } from './components/Profile'
 import PaymentSuccesful from './components/PaymentSuccesful'
 import Footer from './components/Footer'
-import HeaderStatic from './components/HeaderStatic'
 import Register from './components/Register'
 import Hero from './components/Hero'
 import ContentAfterHero from './components/ContentAfterHero'
@@ -29,8 +28,8 @@ function App() {
           <Route path="/categories" element={<><Header/><SearchBar/><Categories/><Footer/></>}/>
           <Route path="/categories/:category" element={<><Header/><SearchBar/><Categories/><Footer/></>}/>
           <Route path="/" element={<><Header/><SearchBar/><Hero/><ContentAfterHero/><Footer/></>}/>
-          <Route path="/fafa" element={<><Searching/><Footer/></>}/>
-          <Route path="/product" element={<RequireAuth><Header/><SearchBar/><Product/><Footer/></RequireAuth>}></Route>
+          <Route path="/search" element={<><Header/><SearchBar/><Searching/><Footer/></>}/>
+          <Route path="/product" element={<RequireAuth><Header/><Product/><Footer/></RequireAuth>}></Route>
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/register" element={<Register/>}></Route>
           <Route path="/profile" element={<RequireAuth><ProfilePage/><Footer/></RequireAuth>}></Route>

@@ -127,6 +127,11 @@ function Product() {
   return (
     <>
       <input type="button" className='goBackButton' value="<" onClick={goBack}></input>
+      {/* <div>
+        <img className='goBackButton' onClick={goBack} src='../images/backArrow.png'></img>
+        <div className='backgroundGoBackButton'></div>
+      </div> */}
+      
 
       {!data && (
         <div className='loaderBox'><div className='loader'/></div>

@@ -5,9 +5,6 @@ import { useParams } from 'react-router-dom';
 
 function Categories() {
 
-  console.log(import.meta.env.VITE_REACT_APP_API);
-  
-
   const { category } = useParams();
   const [data, setData] = useState(null);
   const [categ, setCateg] = useState("Celulares");
@@ -39,11 +36,9 @@ function Categories() {
   useEffect(() => {
     fetch(`${import.meta.env.VITE_REACT_APP_API}api/products`)
       .then((response) => {
-        console.log(response)
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         return setData(data)
       });
   }, []);

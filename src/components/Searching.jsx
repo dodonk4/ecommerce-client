@@ -2,7 +2,6 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Card from './Card';
-import HeaderStatic from './HeaderStatic';
 
 function Searching() {
 
@@ -16,13 +15,20 @@ function Searching() {
   useEffect(() => {
     try {
       fetch(`${import.meta.env.VITE_REACT_APP_API}api/products?${queryParams}`)
-        .then((response) => response.json())
-        .then((data) => setData(data), console.log(data));
+        // .then((response) => response.json())
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          return setData(data);
+        });
     } catch (error) {
-      console.log(error)
+      setData("notFound");
     }
     
-}, [])
+}, [location.search])
+
+  // console.log(data);
 
   const filterFunction = (data) => {
     //Categories
@@ -31,7 +37,6 @@ function Searching() {
  
   return (
     <div className='searchingBox'>
-      <HeaderStatic/>
       {!data && (
         <div className='loaderBox'><div className='loader'/></div>
       )}
@@ -39,7 +44,6 @@ function Searching() {
         <ul className='listOfCards searching'>
         {/* Acá deberían de aparecer en Cards */}
         {data?.map((product) => {
-          console.log(product)
             return (
               <Card key={product.name} nameOfProduct={product.name} imageOfProduct={product.image} typeOfProduct={product.type} priceOfProduct={product.price.$numberDecimal} description={product.description}/>
           )
@@ -48,6 +52,10 @@ function Searching() {
         })}
         </ul>
       )}
+      {data == "notFound" && (
+        <div style="color: white">El producto no ha sido encontrado</div>
+      ) 
+      }
       
       
       </div>

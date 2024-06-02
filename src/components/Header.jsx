@@ -44,7 +44,6 @@ function Header() {
             <ul className='navOptions'>
               <NavLink className="fakeLi" to="/">INICIO</NavLink>
               <NavLink className="fakeLi" to="/categories">CATEGORIAS</NavLink>
-              <NavLink className="fakeLi" to="/about-us">SOBRE NOSOTROS</NavLink>
             </ul>
             {/* <img className="searchLogo" src="images/lupa.png"></img> */}
           </nav>
