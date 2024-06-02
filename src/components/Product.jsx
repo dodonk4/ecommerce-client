@@ -144,17 +144,17 @@ function Product() {
 
 
             <div className='productImageContainer'>
-              <img src={data.image} className='productImage'></img>
+              <img src={data[0].image} className='productImage'></img>
             </div>
 
 
             <div className='productTexts'>
-              <div className='productName'>{data.fullname}</div>
-              <div className='productType'>{data.type}</div>
-              <div className='productDescription'>{data.description}</div>
+              <div className='productName'>{data[0].fullname}</div>
+              <div className='productType'>{data[0].type}</div>
+              <div className='productDescription'>{data[0].description}</div>
               {/* <div className='productDescription'>{data.caracteristics}</div> */}
-              <div className='productStock'>Unidades disponibles: {data.stock}</div>
-              <div className='productPrice'>${data.price.$numberDecimal}</div>
+              <div className='productStock'>Unidades disponibles: {data[0].stock}</div>
+              {/* <div className='productPrice'>${data.price.$numberDecimal}</div> */}
 
               {
                 isItSaved && <input type="button" value="Agregado" className='addToCartButton' onClick={() => setConfirmAddition(true)}></input>
