@@ -1067,6 +1067,38 @@ footer img{
   .headerProfilebox{
     display: none;
   }
+
+  .cartCardImage {
+    height: 100px;
+  }
+
+  .cartCardQuantity{
+    margin: 0px;
+  }
+
+  .cartCardPrice, .cartCardPriceMultiplied {
+    margin: 0px 5px;
+  }
+
+  .cartCardPrice{
+    font-size: 10px;
+  }
+
+  .cartCardDeleteButton {
+    margin: 0px;
+  }
+
+  .cartCardPriceMultiplied{
+    font-size: 10px;
+  }
+
+  .cartCardQuantity{
+    font-size: 10px;
+  }
+
+  .cartCardTitle{
+    font-size: 12px;
+  }
   
 }
 
