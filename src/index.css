@@ -1102,6 +1102,10 @@ footer img{
   .cartCardTitle{
     font-size: 12px;
   }
+
+  .formBox label input{
+    height: 3px;
+  }
   
 }
 
@@ -1121,6 +1125,8 @@ footer img{
   .promosText{
     height: 250px;
   }
+
+  
 }
 
 @media (max-width: 500px) {
