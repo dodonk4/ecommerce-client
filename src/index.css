@@ -990,6 +990,11 @@ footer img{
     height: 200px;
   }
 
+  .cardBody:hover{
+    width: 120px;
+    height: 200px;
+  }
+
   .listOfCards{
     width: 100%;
   }
