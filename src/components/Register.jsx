@@ -40,6 +40,7 @@ function Register() {
   return (
     <div className='formEnviroment'>
       <div className='formBox'>
+        <img className='goBackButton' onClick={() => navigate("/")} src='../images/backArrow.png'></img>
         <b className='formTitle'>REGISTRARSE</b>
         <div className='labelBox'>
           <b>USUARIO</b>
@@ -75,7 +76,7 @@ function Register() {
           <p>USUARIO O CONTRASEÑA INCORRECTOS</p>
         )}
         <button className='formButton' onClick={() => handleRegister(user, password)}>REGISTRARSE</button>
-
+        <div className='registerLink' onClick={() => navigate("/login")}>¿Ya tienes una cuenta? ¡Inicia sesión!</div>
       </div>
         
       </div>

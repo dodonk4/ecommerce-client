@@ -39,6 +39,7 @@ export const Login = () => {
   return (
     <div className='formEnviroment'>
       <div className='formBox'>
+        <img className='goBackButton' onClick={() => navigate("/")} src='../images/backArrow.png'></img>
         <b className='formTitle'>INICIAR SESIÓN</b>
         <div className='labelBox'>
           <b className='usernameTitle'>USUARIO</b>
@@ -55,9 +56,10 @@ export const Login = () => {
         </div>
         
         {errorMessage == "true" && (
-          <p>USUARIO O CONTRASEÑA INCORRECTOS</p>
+          <p className='errorMessageLogin'>USUARIO O CONTRASEÑA INCORRECTOS</p>
         )}
         <button className='formButton' onClick={() => handleLogin(user, password)}>INICIAR SESIÓN</button>
+        <div className='registerLink' onClick={() => navigate("/register")}>¿No tienes una cuenta? ¡Registrate!</div>
 
       </div>
     </div>
