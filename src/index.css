@@ -1103,8 +1103,8 @@ footer img{
     font-size: 12px;
   }
 
-  .formBox label input{
-    height: 3px;
+  .formEnviroment{
+    justify-content: unset;
   }
   
 }
