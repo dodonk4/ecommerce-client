@@ -12,27 +12,13 @@ function Header() {
   const [inputValue, setInputValue] = useState('');
   const [classState, setClassState] = useState("notShownInResponsive");
 
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
-
-  const handleEnterPress = (event) => {
-    if (event.key === 'Enter') {
-      // Navegar a la nueva ruta con el valor del input como parámetro
-      navigate(`/fafa?filter=${inputValue}`);//????????????????????????????????????????????
-    }
-  };
-
   const changeClass = () => {
     if(classState === "notShownInResponsive"){
       setClassState("shownInResponsive");
     }else{
       setClassState("notShownInResponsive");
     }
-    console.log(classState);
-
   }
-
 
   return (
     <>
@@ -42,8 +28,8 @@ function Header() {
           <img className='logo' src='../images/logo.png'></img>
           <nav className={'nav ' + classState}>
             <ul className='navOptions'>
-              <NavLink className="fakeLi" to="/">INICIO</NavLink>
-              <NavLink className="fakeLi" to="/categories">CATEGORIAS</NavLink>
+              <NavLink className="fakeLi" onClick={() => setClassState("notShownInResponsive")} to="/">INICIO</NavLink>
+              <NavLink className="fakeLi" onClick={() => setClassState("notShownInResponsive")} to="/categories">CATEGORIAS</NavLink>
             </ul>
             {/* <img className="searchLogo" src="images/lupa.png"></img> */}
           </nav>

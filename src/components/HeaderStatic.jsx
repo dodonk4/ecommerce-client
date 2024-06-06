@@ -2,6 +2,7 @@ import React from 'react'
 import { Profile } from './Profile'
 
 function HeaderStatic() {
+  
   return (
     <header className='header'>
       <img className='logo' src='../images/logo.png'></img>
