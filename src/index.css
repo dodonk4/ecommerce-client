@@ -1086,6 +1086,9 @@ footer img{
 
   .cartCardDeleteButton {
     margin: 0px;
+    height: 15px;
+    width: 15px;
+    font-size: 10px;
   }
 
   .cartCardPriceMultiplied{
