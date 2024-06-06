@@ -12,8 +12,12 @@ export const CardShoppingCart = (props) => {
   const [valueMovement, setValueMovement] = useState(0);
 
   const priceAndTotal = (e) => {
-
-    if(e.target.value < value){
+    if(typeof e === 'number'){ //In case of deleting elements, it reuses priceAndTotal
+      props.onTotalChange(e, "-");
+    }else{
+      if(e.target.value < 0){
+        "";
+      }else if(e.target.value < value){
         let quantityOfChanges = value - e.target.value;
         setValue(e.target.value);
         setValueMovement(valueMovement + 1);
@@ -21,17 +25,19 @@ export const CardShoppingCart = (props) => {
         let newPrice = e.target.value * props.priceOfProduct
         setPrice(newPrice);
         props.onTotalChange(props.priceOfProduct * quantityOfChanges, "-");
-    }else{
+      }else{
         let quantityOfChanges = e.target.value - value;
         setValue(e.target.value);
         setValueMovement(valueMovement + 1);
         console.log(valueMovement);
-        let newPrice = e.target.value * props.priceOfProduct
+        let newPrice = e.target.value * props.priceOfProduct;
         setPrice(newPrice);
         props.onTotalChange(props.priceOfProduct * quantityOfChanges, "+");
     }
 
+    }
 
+    
     
 }
 
@@ -85,6 +91,7 @@ export const CardShoppingCart = (props) => {
             if (window.confirm('¿Realmente quieres eliminar este producto?')){
               setConfirmRemoval(true)
               props.changeOfCountOfProducts(props.countOfProducts - 1);
+              priceAndTotal(price);
             }
             }}></input>
           

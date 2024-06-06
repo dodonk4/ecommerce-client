@@ -49,7 +49,7 @@ function Card(props) {
         body: JSON.stringify({ username: nameOfTheUser })
       })
       .then((response) => {
-        return response.json()
+        return response.json();
       })
       .then((data) => {
         // data.shoppingCart.map((product) => {
@@ -85,7 +85,7 @@ function Card(props) {
           fetch(`${import.meta.env.VITE_REACT_APP_API}api/user`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username: nameOfTheUser, shoppingCart: `${data.name}-1`, shoppingCartMethod: "add" })
+            body: JSON.stringify({ username: nameOfTheUser, shoppingCart: `${data[0].name}-1`, shoppingCartMethod: "add" })
           })
           .then((response) => {
             response.json();
@@ -110,8 +110,6 @@ function Card(props) {
       <div className='cardBody' onClick={() => navigateToProduct(props.nameOfProduct)}>
         <img src={props.imageOfProduct} className='cardImage'></img>
         <div className='cardTitle'>{props.nameOfProduct}</div>
-        {/* <div className='cardProductType'>{props.typeOfProduct}</div> */}
-        {/* <div className='cardDescription'>{props.description}</div> */}
         <div className='cardPrice'>${props.priceOfProduct}</div>
       </div>
     
