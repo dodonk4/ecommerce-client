@@ -153,7 +153,7 @@ function Product() {
               <div className='productType'>{data[0].type}</div>
               <div className='productDescription'>{data[0].description}</div>
               {/* <div className='productDescription'>{data.caracteristics}</div> */}
-              <div className='productStock'>Unidades disponibles: {data[0].stock}</div>
+              <div className='productStock'><b>Unidades disponibles: {data[0].stock}</b></div>
               {/* <div className='productPrice'>${data.price.$numberDecimal}</div> */}
 
               {
