@@ -99,7 +99,8 @@ function Payment() {
  
 
   const appearance = {
-    theme: 'stripe',
+     theme: 'night',
+    labels: 'floating'
   };
   const options = {
     clientSecret,
@@ -107,7 +108,8 @@ function Payment() {
   };
 
   return (
-    <>
+    <div>
+
     {
         clientSecret && (
             <Elements options={options} stripe={stripePromise}>
@@ -115,7 +117,13 @@ function Payment() {
             </Elements>
         )
     }
-    </>
+
+    {
+      !clientSecret && (
+        <div className='loaderBox'><div className='loader'/></div>
+      )
+    }
+    </div>
   )
 }
 
