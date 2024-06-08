@@ -26,19 +26,16 @@ export const Profile = (props) => {
       {/* <div className="profileBox">  */}
         
         { user && (
-          <div className='headerProfilebox'>
+          <div className={'headerProfilebox ' + props.classNameForProfile}>
             {/* <h2 className='userName'>{ user }</h2> */}
-            <div className="buttonsBox"> 
-                  <NavLink className="loginLink" to="/profile">PERFIL</NavLink>
-                  <NavLink className="loginLink" to="/shoppingCart">CARRITO</NavLink>
-            </div>
+                  <NavLink className="loginLink" to="/shoppingCart" onClick={props.changeClass}>CARRITO</NavLink>
             <div className="logoutButton" onClick={() => handleLogout()}>CERRAR SESIÓN</div>
           </div>
             ) }
 
             {
               !user && (
-                <div className="headerProfilebox">
+                <div className={'headerProfilebox ' + props.classNameForProfile}>
                   <NavLink className="loginLink" to="/login">INICIAR SESIÓN</NavLink>
                   <NavLink className="registerLink" to="/register">REGISTRARSE</NavLink>
                 </div>
@@ -47,7 +44,7 @@ export const Profile = (props) => {
             }
 
       {/* </div> */}
-      <img className='menuLogo' src="images/menu.png" onClick={props.changeClass}></img>
+      {/* <img className='menuLogo' src="images/menu.png" onClick={props.changeClass}></img> */}
       
     </>
   )

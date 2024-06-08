@@ -24,16 +24,18 @@ function Header() {
     <>
       <header className='header'>
 
-        <div className='mainHeader'>
+        <div className={'mainHeader'}>
+        <img className='menuLogo' src="images/menu.png" onClick={changeClass}></img>
           <img className='logo' src='../images/logo.png'></img>
           <nav className={'nav ' + classState}>
             <ul className='navOptions'>
               <NavLink className="fakeLi" onClick={() => setClassState("notShownInResponsive")} to="/">INICIO</NavLink>
               <NavLink className="fakeLi" onClick={() => setClassState("notShownInResponsive")} to="/categories">CATEGORIAS</NavLink>
+              <Profile key="profile" classNameForProfile="profileInsideNav" changeClass={changeClass}></Profile>
             </ul>
             {/* <img className="searchLogo" src="images/lupa.png"></img> */}
           </nav>
-          <Profile key="profile" changeClass={changeClass}></Profile>
+          <Profile key="profile" classNameForProfile="profileOutsideNav" changeClass={changeClass}></Profile>
         </div>      
 
      

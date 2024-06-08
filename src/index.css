@@ -77,6 +77,10 @@ header{
   /* margin-left: auto; */
 }
 
+.profileInsideNav{
+  display: none;
+}
+
 .loginLink, .registerLink{
   text-align: center;
   display: flex;
@@ -1066,6 +1070,24 @@ footer img{
   }
 
   .headerProfilebox{
+    /* display: none; */
+    order: 3;
+  }
+
+  .profileInsideNav{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .loginLink{
+    margin: 10px 20px;
+  }
+
+  .logoutButton{
+    margin: 10px 20px;
+  }
+
+  .profileOutsideNav{
     display: none;
   }
 
