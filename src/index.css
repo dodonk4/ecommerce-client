@@ -912,7 +912,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .paymentForm{
   width: 50%;
-  height: 700px;
+  height: 600px;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -951,6 +951,7 @@ input[type=number]::-webkit-inner-spin-button {
   align-items: center;
   justify-content: center;
   height: 90vh;
+  text-align: center;
 }
 
 .Label{

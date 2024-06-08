@@ -35,8 +35,8 @@ function App() {
           <Route path="/profile" element={<RequireAuth><ProfilePage/><Footer/></RequireAuth>}></Route>
           <Route path="/shoppingCart" element={<RequireAuth><Header/><ShoppingCart/><Footer/></RequireAuth>}></Route>
           {/* <Route path="/payment" element={<Elements stripe={stripePromise}><CardElement options={{style: style}}></CardElement></Elements>}></Route> */}
-          <Route path="/payment-2" element={<RequireAuth><Payment></Payment></RequireAuth>}></Route>
-          <Route path="/payment-succesful" element={<RequireAuth><PaymentSuccesful></PaymentSuccesful><Footer/></RequireAuth>}></Route>
+          <Route path="/payment-2" element={<RequireAuth><Header/><Payment></Payment><Footer/></RequireAuth>}></Route>
+          <Route path="/payment-succesful" element={<RequireAuth><Header/><PaymentSuccesful></PaymentSuccesful><Footer/></RequireAuth>}></Route>
           
           {/* <Route path="/login" element={<Login/>}></Route> */}
         </Routes>
