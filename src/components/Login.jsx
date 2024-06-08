@@ -26,7 +26,7 @@ export const Login = () => {
       .then((response) => {
         toggleFromContext.logAnUser(user);
         localStorage.setItem("token", response.data.token);
-        navigate('/', { replace: true })
+        navigate(-3, { replace: true })
       }).catch((err) => {
         console.log(err)
         navigate('/login?wrongLogin=true')
@@ -39,7 +39,7 @@ export const Login = () => {
   return (
     <div className='formEnviroment'>
       <div className='formBox'>
-        <img className='goBackButton' onClick={() => navigate("/")} src='../images/backArrow.png'></img>
+        <img className='goBackButton' onClick={() => navigate(-3)} src='../images/backArrow.png'></img>
         <b className='formTitle'>INICIAR SESIÓN</b>
         <div className='labelBox'>
           <b className='usernameTitle'>USUARIO</b>

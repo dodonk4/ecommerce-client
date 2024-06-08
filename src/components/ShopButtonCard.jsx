@@ -5,10 +5,6 @@ function ShopButtonCard(props) {
 
   const navigate = useNavigate();
 
-  const goToLogin = () => {
-    navigate("/login");
-  }
-
   const [classForNonSavedProduct, setClassForNonSavedProduct] = useState("shopCardButton");
   const [title, setTitle] = useState("Agregar");
 

@@ -15,7 +15,7 @@ export const CardShoppingCart = (props) => {
     if(typeof e === 'number'){ //In case of deleting elements, it reuses priceAndTotal
       props.onTotalChange(e, "-");
     }else{
-      if(e.target.value < 0){
+      if(e.target.value <= 0){
         "";
       }else if(e.target.value < value){
         let quantityOfChanges = value - e.target.value;
