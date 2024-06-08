@@ -126,7 +126,7 @@ function Product() {
 
   return (
     <>
-      <img className='goBackButton' onClick={() => navigate("/")} src='../images/backArrow.png'></img>
+      <img className='goBackButton' onClick={() => navigate(-1)} src='../images/backArrow.png'></img>
       {/* <div>
         <img className='goBackButton' onClick={goBack} src='../images/backArrow.png'></img>
         <div className='backgroundGoBackButton'></div>
