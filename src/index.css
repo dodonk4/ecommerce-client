@@ -1043,6 +1043,7 @@ footer img{
   }
   .blockOfCategories li:hover :not(.categorySelected){
     letter-spacing: 0px;
+    color: #707072;
   }
 
   .productBody{
@@ -1117,6 +1118,14 @@ footer img{
 
   .copyrightText{
     font-size: 10px;
+  }
+
+  .promo:hover{
+    padding: 0px;
+  }
+  
+  .promo:hover::before{
+    opacity: 0;
   }
 }
 

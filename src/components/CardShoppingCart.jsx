@@ -87,13 +87,13 @@ export const CardShoppingCart = (props) => {
           <div className='cartCardPrice'>${props.priceOfProduct}</div>
           <div className='cartCardPriceMultiplied'>${price}</div>
           <input className='cartCardQuantity' type='number' value={value} onChange={priceAndTotal} ></input>
-          <input className='cartCardDeleteButton' value=' X ' type='button' onClick={() => {
+          <img src='../images/close.png' className='cartCardDeleteButton' onClick={() => {
             if (window.confirm('¿Realmente quieres eliminar este producto?')){
               setConfirmRemoval(true)
               props.changeOfCountOfProducts(props.countOfProducts - 1);
               priceAndTotal(price);
             }
-            }}></input>
+            }}></img>
           
         </div>
       )
