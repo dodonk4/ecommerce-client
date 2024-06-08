@@ -25,7 +25,7 @@ function Header() {
       <header className='header'>
 
         <div className={'mainHeader'}>
-        <img className='menuLogo' src="images/menu.png" onClick={changeClass}></img>
+        <img className='menuLogo' src="../images/menu.png" onClick={changeClass}></img>
           <img className='logo' src='../images/logo.png'></img>
           <nav className={'nav ' + classState}>
             <ul className='navOptions'>
